@@ -1,5 +1,5 @@
-name: models
-description: "A new Flutter package project."
+name: sleepymoody_models
+description: "Flutter package for SleepyMoody to manage models of the app"
 version: 0.0.1
 homepage:
 
@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  json_serializable: ^6.10.0
 
 dev_dependencies:
   flutter_test:
