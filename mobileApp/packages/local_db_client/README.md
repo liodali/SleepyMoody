@@ -1,39 +1,57 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Local DB Client
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A Flutter package that provides a database client for managing data in local storage. This package handles all local data persistence operations for the SleepyMoody application.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Local data storage and retrieval
+- Database schema management
+- Data persistence for offline functionality
+- Type-safe database operations
+- Built with code generation for optimal performance
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To use this package in your Flutter application:
+
+1. Add the dependency to your `pubspec.yaml`
+2. Run the build runner to generate necessary code:
+   ```bash
+   dart run build_runner build
+   ```
+3. Import the package in your Dart files
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+After running the build runner, you can use the generated database client:
 
 ```dart
-const like = 'sample';
+import 'package:local_db_client/local_db_client.dart';
+
+// Initialize the database
+final dbClient = LocalDbClient();
+
+// Perform database operations
+await dbClient.initialize();
+```
+
+### Build Runner
+
+This package uses code generation. After making changes to the database schema or models, run:
+
+```bash
+dart run build_runner build
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+This package is part of the SleepyMoody application ecosystem and is designed specifically for local data management. It provides a clean abstraction layer over the underlying database implementation.
+
+### Development
+
+When modifying this package:
+1. Make your changes to the source files
+2. Run `dart run build_runner build --delete-conflicting-outputs ` to regenerate code
+3. Test your changes thoroughly
+
+For questions or issues, please refer to the main SleepyMoody project documentation.
