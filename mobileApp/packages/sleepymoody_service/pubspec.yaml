@@ -1,5 +1,5 @@
 name: sleepymoody_service
-description: "A new Flutter package project."
+description: "service responsible to store in local db and sync with our server"
 version: 0.0.1
 homepage:
 
@@ -10,6 +10,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  local_db_client:
+    path: ../local_db_client
+  api_client:
+    path: ../api_client
 
 dev_dependencies:
   flutter_test:
